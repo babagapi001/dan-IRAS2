@@ -1,0 +1,39 @@
+-- 
+
+side by side display
+
+reference image ----- live stream(current status)
+
+Load the Daily Reference:
+- When the application starts, load the most recent reference image to display alongside the live stream.
+Real-Time Stream:
+- Continue to stream the current state of the shelf using the live video feed.
+Side-by-Side Display:
+- Display the reference image and the live stream side-by-side or in separate sections of the interface to allow users to compare them.
+
+
+Alerts through notfications
+
+set threshold
+
+
+-- dont delete
+      Captured Image Section
+      <div style={{ flex: 1 }}>
+         {/* Button to capture and download the frame */}
+         <button
+          onClick={captureAndDownloadFrame}
+          className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-200 ease-in-out"
+        >
+          Capture Reference Image
+        </button>
+
+        {capturedImage ? (
+          <div>
+            <h3>Refence Image:</h3>
+            <img src={capturedImage} alt="Captured Frame" style={{ width: '100%' }} /> {/* Display the captured frame */}
+          </div>
+        ) : (
+          <p>No captured image</p>
+        )}
+      </div>

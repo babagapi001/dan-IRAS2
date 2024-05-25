@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page iFrame</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: transparent;
+        }
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 50%;
+
+        }
+        #iframeContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="iframeContainer">
+        <div id="loading">
+            <img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.webp" alt="Loading..."style="width: 15%;">
+        </div>
+        <iframe src="https://script.google.com/macros/s/AKfycbxp2KqBs9yLjcmBOUJUSz2UE9kL7Tb8MUPcuz1xImXQZOjOdoXrQTa4NdRpLB4Rce04/exec" onload="hideLoading()"></iframe>
+    </div>
+    
+    <script>
+        function hideLoading() {
+            document.getElementById("loading").style.display = "none";
+        }
+    </script>
+</body>
+</html>

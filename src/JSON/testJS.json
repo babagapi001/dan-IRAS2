@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "Shelf Camera - 1",
+      "description": "Canned Goods",
+      "status": "Low",
+      "percentage": "25%",
+      "reducedArea": "Yes",
+      "width": "lg:w-80",
+      "height": "h-80"
+    },
+    {
+      "id": 2,
+      "title": "Shelf Camera - 2",
+      "description": "Dairy Products",
+      "status": "Half Full",
+      "percentage": "50%",
+      "reducedArea": "No",
+      "width": "lg:w-96",
+      "height": "h-64"
+    }
+  ]
+  
